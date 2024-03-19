@@ -8,7 +8,8 @@
 
 
 ##  Descripción 
-Este repositorio contiene el desarrollo de una API para controlar LEDs utilizando la metodología de Desarrollo Guiado por Pruebas (Test Driven Development - TDD). La API permite manejar 16 LEDs de dos estados (encendido y apagado), cambiar el estado de un LED individual sin afectar a los demás, cambiar el estado de todos los LEDs en una sola operación y recuperar el estado actual de un LED.
+
+¡Bello bello! Este repo contiene el desarrollo de una API para manejar lucesitas mágicas, ¡sí, LEDs! Todo esto bajo la técnica super cool de Desarrollo Dirigido por Pruebas (Test Driven Development - TDD). La API te permite controlar 16 LEDs con dos modos (encendido y apagado), cambiar el estado de uno sin afectar a los otros, cambiar todos al mismo tiempo y saber el estado actual de cada uno. ¡Qué chulo!
 
 ---
 
