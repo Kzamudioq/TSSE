@@ -13,7 +13,7 @@ Este repositorio contiene el desarrollo de una API para controlar LEDs utilizand
 ---
 
 <p align="center" width="100%">
-    <img width="60%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/de274c78-c5b1-4ec7-9dfb-88a55dcb7fcb"> 
+    <img width="60%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/94efffa5-7856-4540-b27d-3c685f9240f5"> 
 </p>
 
 ## Requerimientos del Driver
@@ -70,7 +70,9 @@ FAILED:   0
 IGNORED:  0
 
 ```
-
+<p align="center" width="100%">
+    <img width="60%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/de274c78-c5b1-4ec7-9dfb-88a55dcb7fcb"> 
+</p>
 
 
 
