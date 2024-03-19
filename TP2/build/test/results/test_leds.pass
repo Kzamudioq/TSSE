@@ -1,0 +1,62 @@
+---
+:source:
+  :path: test
+  :file: test_leds.c
+:successes:
+- :test: test_initial_state
+  :line: 40
+  :message: ''
+  :unity_test_time: 0
+- :test: test_single_led_on
+  :line: 41
+  :message: ''
+  :unity_test_time: 0
+- :test: test_single_led_off
+  :line: 42
+  :message: ''
+  :unity_test_time: 0
+- :test: test_multiple_leds_on_and_off
+  :line: 43
+  :message: ''
+  :unity_test_time: 0
+- :test: test_single_led_get_status_on
+  :line: 44
+  :message: ''
+  :unity_test_time: 0
+- :test: test_all_leds_turn_on
+  :line: 45
+  :message: ''
+  :unity_test_time: 0
+- :test: test_all_leds_turn_off
+  :line: 46
+  :message: ''
+  :unity_test_time: 0
+- :test: test_uninitialized_led_port
+  :line: 47
+  :message: ''
+  :unity_test_time: 0
+- :test: test_uninitialized_led_port_get_single_value
+  :line: 48
+  :message: ''
+  :unity_test_time: 0
+- :test: test_check_boundary_values
+  :line: 49
+  :message: ''
+  :unity_test_time: 0
+- :test: test_check_forbidden_values_turn_on
+  :line: 50
+  :message: ''
+  :unity_test_time: 0
+- :test: test_check_forbidden_values_turn_off
+  :line: 51
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 12
+  :passed: 12
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.04389109998010099

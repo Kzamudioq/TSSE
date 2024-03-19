@@ -1,0 +1,774 @@
+% Created 2020-04-24 vie 23:03
+% Intended LaTeX compiler: pdflatex
+\documentclass[12pt,a4paper, twoside]{article} % "twoside" en lugar de "twosite"
+\usepackage[utf8]{inputenc}
+\usepackage{pgf-umlcd}
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{etoolbox}
+\usepackage{xparse}
+\usetikzlibrary{positioning, arrows.meta, shapes}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{apalike}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{capt-of}
+\usepackage[spanish]{babel}
+\let\bibhang\relax  % Elimina la definición previa de \bibhang
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+\usepackage[left=2.00cm, right=2.50cm, top=2.50cm, bottom=2.00cm]{geometry}
+\usepackage{fancyhdr}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\emph{\uppercase{\leftmark}}}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{1.0pt}
+\pagestyle{fancy}
+\date{}
+\title{Testing de software en sistemas embebidos}
+\hypersetup{
+    pdfauthor={},
+    pdftitle={Testing de software en sistemas embebidos},
+    pdfkeywords={},
+    pdfsubject={},
+    pdfcreator={Emacs 26.2 (Org mode 9.1.9)}, 
+    pdflang={ spanish }
+}
+
+\begin{document}
+
+\renewcommand\refname{}
+\renewcommand{\contentsname}{Tabla de contenido}
+\newpage
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+                \includegraphics[width=0.8\textwidth]{Figuras/logoFIUBA.pdf} % Ruta al logo de FIUBA
+        
+        \vspace{1.5cm}
+        
+        \textbf{\LARGE Realità : prototipo de sistema autónomo para captura de información topográfica}
+        
+        \vspace{4cm}
+        \textbf{\Large Testing de software en sistemas embebidos}
+        
+        \vspace{1.5cm}
+        
+        
+        \textbf{\Large Escrito por:}\\
+        \large Karen Tatiana Zamudio
+        
+        \vspace{0.8cm}
+        
+        \textbf{\Large Revisión A}\\
+        \large Esteban Volentini
+        
+        \large Mariano Finochietto
+        
+        \vfill
+        
+        \textbf{\Large Universidad de Buenos Aires}\\ 
+        \vspace{0.2cm}
+        
+        \large 14 febrero 2024
+        
+    \end{center}
+\end{titlepage}
+\newpage
+
+\section*{Historial de cambios}
+\label{sec:registro}
+
+\begin{table}[ht]
+  \centering
+  \caption{Registro de Revisiones}
+  \label{tab:registro}
+  \begin{tabularx}{\linewidth}{|c|X|c|}
+    \hline
+    Revisión & Detalles de los cambios realizados & Fecha \\
+    \hline
+    0 & Creación del documento & \ 09 de febrero 2024 \\
+    \hline
+    1 & Entrega A & \ 14 de febrero 2024 \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+\label{sec:org60390fa}
+
+El desarrollo del proyecto Realità representa un esfuerzo colaborativo destinado a crear un sistema autónomo para la captura de información topográfica, abordando la creciente demanda de eficiencia en la obtención de datos topográficos. Como parte integral de este proceso, se presenta el Master Test Plan (MTP), una herramienta fundamental para asegurar la calidad y confiabilidad del software que respalda este innovador sistema.
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/Prototipo.png}
+\caption{Prototipo para captura de información de nube de puntos.}
+\label{fig:diagBloques}
+\end{figure}
+
+\newpage
+
+
+\subsection{Propósito}
+\label{sec:org434c3ef}
+
+El objetivo principal del proyecto es abordar los desafíos relacionados con la obtención de datos topográficos precisos, por lo anterior, está dirigido a profesionales y organizaciones involucradas en proyectos que requieren información geoespacial precisa, como ingenieros, arquitectos, empresas de construcción y gestión de recursos naturales.
+
+El prototipo se basa en la integración de múltiples sensores, que incluyen sensores GNSS (Sistemas de Navegación Global por Satélite), sensores LIDAR (Detección y Teledetección por Luz y Alcance), un sensor de imagen con profundidad y una IMU (Unidad de Medición Inercial) en su versión inicial, los anteriores componentes trabajan en conjunto para capturar una amplia gama de datos topográficos (fusión de datos  para nube de puntos 3D), desde coordenadas geoespaciales iniciales hasta detalles visuales y altimétricos, con el potencial de escalabilidad a sensores de mayor precisión en futuras etapas del proyecto. La fusión de datos para nube de puntos 3D es una etapa clave en el proceso del sistema autónomo para captura de información topográfica. Comienza con la recopilación de datos de múltiples sensores, incluyendo GNSS, LIDAR, sensor de imagen e IMU, que capturan información topográfica. Estos datos se envían al MicroControlador (MC), donde se combinan y procesan inteligentemente para generar una nube de puntos 3D con coordenada que representa el entorno topográfico, este proceso se   evidencia en la figura 2.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.95\textwidth]{./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf}
+\caption{Diagrama de secuencia}
+\label{fig:diagBloques}
+\end{figure}
+
+
+
+
+\subsection{Ámbito del sistema}
+\label{sec:org12e44a1}
+
+
+\subsubsection{Nombre del sistema}
+\label{subsec:org12e44a2}
+
+Se introduce con entusiasmo al innovador proyecto "Realità", un sistema autónomo diseñado para la captura de información topográfica de manera eficiente y precisa, la elección del nombre "Realità" refleja su capacidad única para capturar la realidad del entorno con una precisión excepcional. Adicionalmente, el nombre no solo simboliza la fusión de datos provenientes de múltiples sensores, como GNSS, LIDAR, sensor de imagen e IMU, para crear una representación tridimensional detallada, sino que también encarna la visión de transformar sueños en una realidad tangible para quien construye este proyecto.
+
+En un contexto donde la precisión de la información topográfica es esencial para profesionales y organizaciones en diversas áreas, "Realità" se rige como un sueño convertido en realidad, ofreciendo un enfoque revolucionario que supera los desafíos actuales y promete redefinir la manera en que se aborda la captura de datos geoespaciales.
+
+
+\subsubsection{Objetivos}
+\label{subsec:org12e44a2}
+
+
+\begin{itemize}
+
+\item Desarrollar un prototipo funcional del sistema autónomo para la captura de información topográfica, destacando la integración de sensores multimodales como piedra angular.
+
+\item Demostrar la viabilidad y eficacia de esta tecnología innovadora al generar mapas precisos del entorno que sean comparables a los mapas generados por métodos tradicionales, lo que e reduce en nuevas oportunidades para la aplicación de la tecnología en una variedad de campos, como la construcción, la planificación urbana y la gestión de recursos naturales.
+
+\item Implementar un algoritmo de fusión de datos de última generación para integrar datos de sensores GNSS, LIDAR, sensor de imagen e IMU, lo anterior proporcionará una representación detallada y precisa del terreno, permitiendo a los usuarios obtener una comprensión más completa del entorno y, por ende, tomar decisiones más informadas.
+
+\item Culminar exitosamente el desarrollo del prototipo, estableciendo así las bases para futuras mejoras y desarrollos en la captura de datos topográficos, esta plataforma experimental permitirá a los investigadores explorar nuevas tecnologías que mejoren la precisión, eficiencia y utilidad de la captura de datos topográficos.
+\end{itemize}
+
+
+
+
+
+\subsubsection{Alcance}
+\label{subsec:org12e44a2}
+
+
+Este proyecto tiene como alcance principal el desarrollo de un prototipo funcional para un sistema autónomo diseñado específicamente para la captura de información topográfica, la esencia del enfoque radicará en la integración de sensores multimodales, como GNSS, LIDAR, sensor de imagen e IMU, con el propósito de demostrar la viabilidad y eficacia en la generación de mapas precisos del entorno, ademas la implementación de un algoritmo de fusión de datos de última generación será crucial para proporcionar una representación detallada y precisa del terreno. Todo lo anterior, llevará a cabo una evaluación exhaustiva en campos como la construcción, planificación urbana y gestión de recursos naturales.
+
+
+
+
+Sin embargo, es esencial señalar que este proyecto no contemplará la implementación de sensores de mayor precisión en futuras etapas, ni explorará la integración de tecnologías aún no desarrolladas. Además, no se abordarán aspectos relacionados con la seguridad cibernética de los datos recopilados, quedando este tema claramente fuera del alcance del presente trabajo. Estas limitaciones se establecen con el propósito de proporcionar claridad con respecto a las fronteras del proyecto y dirigir futuras investigaciones hacia objetivos específicos.
+
+
+\section{Contenidos}
+\label{sec:orgc1c4017}
+
+Esta sección ofrece un resumen conciso de los contenidos y la estructura  de master test plan para el prototipo de captura de información topográfica denominado como "Realità", siguiendo las pautas establecidas del Appendix E del libro: “Testing Embedded Software” de Bart Broekman y Edwin Notenboom. Los contenidos del presente master test plan son:
+
+
+\begin{enumerate}
+\item Asignaciones
+
+\item Bases del test
+
+\item Estrategia general del test
+
+\item Amenazas y riesgos
+
+\item Infraestructura
+
+\item Organización de pruebas 
+
+\item Entregables de pruebas 
+
+\item Gestion de configuración
+
+\end{enumerate}
+
+
+
+
+\section{Asignaciones}
+\label{sec:orgc1c4017}
+
+
+Esta sección presenta el plan de pruebas de aceptación para el trabajo de captura de información topográfica automatizada, denominado "Realità". El documento abarca la responsabilidad del ingeniero en su creación y la ejecución.
+
+
+\subsection{Responsable}
+\label{sec:orgdaca22c}
+
+La responsabilidad de la creación de este documento recae en Karen Zamudio, ingeniero especializado y líder técnico en el desarrollo del trabajo Realità.
+
+
+\subsection{Contratista principal}
+\label{sec:descripcion-general}
+
+La ejecución de las asignaciones está a cargo de Karen Zamudio, quien desempeña el rol crucial de jefe de pruebas en el desarrollo del trabajo de captura de información topográfica automatizada, denominado "Realità".
+
+\subsection{Alcance del test de aceptación}
+\label{sec:requisitos-especificos}
+
+
+En el ámbito del test de aceptación, la atención se dirige exclusivamente al dispositivo identificado como Realità, este enfoque delimitado permite una evaluación exhaustiva y detallada de las funcionalidades y capacidades de este componente crucial en la captura de información topográfica automatizada. 
+
+Al concentrar los esfuerzos de prueba en el Realità, se busca garantizar una validación minuciosa y específica de todas las características necesarias para lograr la captura automatizada de datos topográficos.
+
+\subsection{Objetivos del test de aceptación}
+\label{sec:requisitos-especificos}
+
+El propósito primordial de las pruebas es asegurar la integridad y funcionalidad de Realità, donde se busca garantizar que el sistema cumpla de manera rigurosa con los requisitos establecidos, proporcionando una solución confiable y eficiente para la captura de datos topográficos.
+
+
+\begin{enumerate}
+\item Realizar una revisión detallada de cada componente del sistema en relación con los requisitos predefinidos, asegurando la solidez y coherencia global del dispositivo.
+
+\item Confirmar la correcta implementación de funciones clave necesarias para la captura precisa de datos topográficos, validando la funcionalidad principal de Realità.
+
+\item Detectar cualquier discrepancia entre el comportamiento anticipado del sistema y las observaciones reales durante las pruebas, garantizando la coherencia entre expectativas y resultados.
+
+\item Crear una herramienta de pruebas automáticas de alta calidad que no solo respalde la eficiencia del presente test, sino que también sea reutilizable en futuras iteraciones del dispositivo.
+
+\item Proporcionar datos valiosos que contribuyan a ajustes inmediatos y orienten mejoras futuras, asegurando la adaptabilidad y evolución continua del sistema.
+
+\item Documentar de manera exhaustiva la estructura y el funcionamiento de la herramienta para facilitar su mantenimiento y actualización.
+
+\end{enumerate}
+
+\subsection{Precondiciones (externas)}
+\label{sec:requisitos-especificos}
+
+Las siguientes condiciones externas deben cumplirse antes de iniciar el test de aceptación:
+
+\begin{enumerate}
+\item La documentación completa del sistema debe entregarse antes del 25/05/24, proporcionando al equipo de pruebas información esencial para la preparación y ejecución del test.
+
+\item El sistema estará disponible y listo para iniciar las pruebas de aceptación a partir del 09/04/24, permitiendo un acceso oportuno y eficiente para el equipo de testing.
+
+\item Todas las pruebas programadas deben concluirse antes del 09/05/24, asegurando que el equipo de testing tenga un plazo definido para llevar a cabo las evaluaciones necesarias.
+
+
+
+\end{enumerate}
+
+
+\subsection{Precondiciones (internas)}
+\label{sec:requisitos-especificos}
+
+El equipo de testing necesita cumplir con las siguientes condiciones internas para llevar a cabo las asignaciones de manera efectiva:
+
+\begin{enumerate}
+\item La ejecución de las pruebas comienza únicamente después de que el objeto de testing ha pasado con éxito el chequeo de entrada, garantizando que el sistema esté en condiciones adecuadas para el test.
+
+\item Cualquier demora durante las pruebas se reportará de inmediato al líder de pruebas, permitiendo una gestión eficiente de cualquier problema que pueda surgir durante la ejecución.
+
+\item Todas las herramientas necesarias y la infraestructura de pruebas deben estar disponibles durante la ejecución de las pruebas, asegurando un entorno propicio para la evaluación.
+
+\item Cualquier inconveniente que obstaculice el progreso durante la ejecución de las pruebas debe abordarse de inmediato para garantizar la continuidad y eficacia del proceso de testing.
+
+\end{enumerate}
+
+
+\section{Bases del test}
+\label{sec:orgc1c4017}
+
+Esta sección proporciona una visión general del proyecto, incluyendo los siguientes aspectos:
+
+
+\subsection{Especificaciones del producto}
+\subsubsection{Diseño funcional general} 
+
+El diseño funcional general ofrece una descripción panorámica de las funciones clave del producto, abordando sus características y capacidades fundamentales.
+
+\subsubsection{Diseño funcional detallado}
+
+Este documento detallado presenta una visión a profundidad de las funciones específicas del producto, proporcionando información pormenorizada sobre su implementación y operación.
+
+\subsubsection{Guía del usuario Realità}
+
+La guía del usuario Realità se presenta como un manual exhaustivo destinado a los usuarios finales, contiene instrucciones detalladas para aprovechar al máximo las capacidades del producto, garantizando una experiencia de usuario óptima.
+
+\subsection{Normas}
+\subsubsection{Normas internas para productos de prueba}
+
+Establecemos normas internas que actúan como directrices esenciales para la creación y ejecución de productos de prueba, asegurando coherencia y calidad en todo el proceso.
+
+\subsubsection{Libro Testing Embedded Software}
+
+Este libro representa una fuente de referencia esencial que aborda las mejores prácticas en pruebas de software integrado, su contenido se utiliza como guía para garantizar un enfoque sólido y eficiente en la fase de pruebas.
+
+\subsection{Manuales de usuario}
+\subsubsection{Manual del entorno de prueba del usuario}
+
+Este manual ofrece instrucciones detalladas sobre el entorno de prueba, proporcionando a los usuarios información clara y completa para una interacción efectiva con el sistema.
+
+\subsubsection{Manual de herramientas de prueba del usuario}
+
+La guía sobre las herramientas de prueba ofrece información detallada sobre las herramientas utilizadas en el proceso de prueba, asegurando una comprensión profunda de su funcionamiento y aplicación.
+
+\subsection{Planes del proyecto}
+\subsubsection{Plan de proyecto Realità}
+
+En el plan de proyecto Realità, se detallan todos los aspectos relacionados con la gestión y ejecución del proyecto, desde los objetivos hasta la asignación de recursos, proporciona una hoja de ruta integral para el éxito del proyecto.
+
+\subsection{Planificación}
+\subsubsection{Planificación del equipo de desarrollo Realità}
+
+La planificación detallada del equipo de desarrollo para Realità establece la estructura temporal y las tareas asignadas, garantizando una ejecución eficiente y coordinada de las actividades del equipo durante todo el proyecto.
+
+
+\section{Estrategía general del test}
+\label{sec:orgc1c4017}
+
+La estrategia de pruebas de aceptación para Realità se basa en la premisa de que las pruebas de módulos y de integración son realizadas por el equipo de desarrollo. Esta estrategia se ha elaborado después de reuniones con el comisionado, líder del trabajo y gerente de pruebas específicamente para el desarrollo del trabajo Realità.
+
+
+\subsection{Características de calidad y su importancia relativa}
+\label{sec:org24980a8}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c| c| c|}
+\hline
+\textbf{Característica} & \textbf{Subcaracterística} & \textbf{Importancia relativa (\%)} \\
+\hline
+Funcionalidad & Idoneidad y Precisión  & 50 \\
+Usabilidad & Operabilidad & 15 \\
+Eficiencia & Tiempo de respuesta & 25 \\
+Mantenibilidad & Cambiabilidad & 10 \\
+\hline
+\textbf{Total} & & \textbf{100} \\
+\hline
+\end{tabular}
+\caption{Importancia relativa de las características de calidad.}
+
+\label{tab:caracteristicas_calidad}
+\end{table}
+
+Subcaracterísticas seleccionadas:
+
+\begin{enumerate}
+
+\item Idoneidad (Suitability): verificación de que las funcionalidades e interfaces cumplan con los requisitos establecidos.
+
+\item Operabilidad (Operability): evaluación de la interfaz de usuario en términos de simplicidad e intuición.
+
+\item Precisión (Accurateness): mantenimiento de la precisión de los valores medidos en diversas condiciones de funcionamiento.
+
+\item Eficiencia (Time Behaviour): garantizar que el tiempo de respuesta ante eventos críticos sea aceptable.
+
+\item Mantenibilidad (Changeability): facilitar la actualización y adaptación del software.
+
+\end{enumerate}
+
+\subsection{Matriz de estrategia para Realità}
+\label{sec:org24980a8}
+
+Realità, como sistema autónomo diseñado para la captura eficiente y precisa de información topográfica, despliega diversas funciones esenciales para cumplir con los objetivos del proyecto. 
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+    \hline
+    Subsistema & Funcionalidad  & Usabilidad & Eficiencia & Mantenibilidad \\
+    \hline
+    SAD & ++ & ++ & + &  \\
+    SP & ++ & + & ++ & + \\
+    SFD3D & ++ & ++ & ++ & ++ \\
+    SC & + & ++ & + & ++\\
+    \hline
+    Importancia relativa (100) & 40 & 20 & 25 & 15\\
+    \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Referencias}
+
+\begin{itemize}
+    \item ++ La característica de calidad es predominante para el subsistema.
+    \item + La característica de calidad es relevante para el subsistema.
+    \item (vacío) La característica de calidad es insignificante para el subsistema.
+\end{itemize}
+
+
+A continuación, se detallan los subsistemas funcionales clave de Realità en relación con la captura de datos topográficos:
+
+\begin{enumerate}
+
+\item \textbf{Subsistema adquisición de datos (SAD)}
+\begin{enumerate}
+\item Realità emplea una variedad de sensores y controladores para garantizar una captura eficiente de datos topográficos:
+\begin{itemize}
+\item Sensores LiDAR: utilizados para la detección remota y la generación de modelos tridimensionales precisos del entorno.
+\item Sensores GPS: proporcionan información geoespacial precisa para la localización y el mapeo del terreno.
+\item Sensores de imagen con profundidad: permiten la captura de imágenes tridimensionales del entorno con información de profundidad.
+\item Sensores IMU (Unidad de Medición Inercial): utilizados para medir y registrar los movimientos y la orientación del dispositivo en tiempo real.
+\item Controladores de movimiento: responsables de coordinar y controlar los movimientos del dispositivo para garantizar una captura precisa y eficiente de los datos topográficos.
+\end{itemize}
+
+\end{enumerate}
+
+Estos componentes trabajan en conjunto para proporcionar una captura de datos integral y precisa, permitiendo a Realità cumplir con sus objetivos de manera efectiva.
+
+\item \textbf{Subsistema de procesamiento de datos (SP)}
+\begin{enumerate}
+
+\item \textbf{Microcontrolador (MC):} el microcontrolador STM32 integra toda la información de los sensores y coordina el procesamiento de datos para su posterior análisis y utilización.
+\end{enumerate}
+
+\item \textbf{Subsistema de fusión de datos 3D (SFD3D)}
+\begin{enumerate}
+
+\item \textbf{Generador de Nube de Puntos 3D:} este componente genera la nube de puntos 3D a partir de los datos fusionados, proporcionando una representación detallada del terreno topográfico.
+
+\item \textbf{Clasificación de Puntos 3D:} este algoritmo clasifica los datos capturados por los diferentes sensores para crear una representación tridimensional precisa del entorno.
+\end{enumerate}
+
+\item \textbf{Subsistema de comunicación (SC)}
+\begin{enumerate}
+\item \textbf{Sensores Wi-Fi, Bluetooth y de radio:} estos sensores permiten la comunicación inalámbrica para la coordinación, manejo, inicio y finalización de la información entre Realità y otros dispositivos o estaciones base.
+\end{enumerate}
+
+\item \textbf{Integración sinérgica del sistema completo}
+\begin{enumerate}
+\item \textbf{Integración holística para una captura integral:} la integración completa que proporciona una solución holística, maximizando la eficiencia y precisión en la captura de datos topográficos alineados con los requerimientos del proyecto.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\subsection{Técnicas de diseño de pruebas}
+
+Las técnicas de diseño de pruebas desempeñan un papel crucial en el proceso de aseguramiento de la calidad de Realità, estas técnicas proporcionan el marco fundamental para evaluar la funcionalidad, usabilidad, confiabilidad y precisión del sistema autónomo de captura de información topográfica.
+
+En el contexto específico de Realità, las técnicas de diseño de pruebas se adaptan de manera precisa y meticulosa para abordar los desafíos únicos asociados con la integración de sensores multimodales, como GNSS, LIDAR, sensor de imagen e IMU.
+
+\subsubsection{Pruebas de funcionalidad}
+
+\textbf{Descripción:} verificar la funcionalidad de cada componente del sistema Realità, incluyendo la captura de datos, procesamiento y generación de mapas.
+
+\textbf{Técnicas:}
+\begin{enumerate}
+    \item Pruebas unitarias: evaluar cada módulo individualmente.
+    \item Pruebas de integración: verificar la interacción entre módulos, especialmente en la fusión de datos de múltiples sensores.
+    \item Pruebas de sistema: validar la funcionalidad del sistema en su conjunto.
+\end{enumerate}
+
+\subsubsection{Pruebas de usabilidad}
+
+\textbf{Descripción:} evaluar la facilidad de uso del sistema Realità para los usuarios finales, centrándose en la interpretación de los mapas generados.
+
+\textbf{Técnicas:}
+\begin{enumerate}
+    \item Pruebas de interfaz de usuario (UI): Evaluar la interfaz para asegurar una experiencia intuitiva.
+    \item Pruebas de navegación: verificar la facilidad de movimiento y acceso a funciones clave.
+\end{enumerate}
+
+\subsubsection{Pruebas de confiabilidad}
+
+\textbf{Descripción:} asegurarse de que Realità produce resultados precisos y consistentes bajo diversas condiciones.
+
+\textbf{Técnicas:}
+\begin{enumerate}
+    \item Pruebas de estabilidad: evaluar la capacidad del sistema para manejar cargas de trabajo sostenidas.
+    \item Pruebas de estrés: exponer el sistema a condiciones extremas para evaluar su comportamiento.
+\end{enumerate}
+
+\subsubsection{Pruebas de fusión de datos}
+
+\textbf{Descripción:} garantizar que la integración de datos de sensores GNSS, LIDAR, sensor de imagen e IMU genere mapas detallados y precisos.
+
+\textbf{Técnicas:}
+\begin{enumerate}
+    \item Pruebas de fusión de datos 3D: evaluar la capacidad del sistema para generar representaciones tridimensionales precisas.
+    \item Pruebas de coherencia de datos: verificar que los datos de diferentes sensores se integren de manera coherente.
+\end{enumerate}
+
+\subsubsection{Pruebas de captura de datos en campo}
+
+\textbf{Descripción:} evaluar el rendimiento de Realità durante la captura de datos topográficos en situaciones del mundo real.
+
+\textbf{Técnicas:}
+\begin{enumerate}
+    \item Pruebas de campo simuladas: emular condiciones del mundo real para evaluar la precisión y eficacia de la captura de datos.
+\end{enumerate}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{Prueba} &\textbf{Idoneidad} & \textbf{Operabilidad} & \textbf{Precisión} & \textbf{Tiempo} & \textbf{Cambiabilidad}\\
+\hline
+Unitarias & & ++ & + & + & + \\
+Integración & & ++ & & ++ &   \\
+Sistema & & + & ++ & ++ & \\
+UI & & & ++ & &\\
+Navegación & & & ++ &  & \\
+Estabilidad & & + & ++ &  &\\
+Estrés & & + & ++ & & \\
+SFD3D & ++ & ++ & ++ & ++ & \\
+Coherencia  & & & ++ & &\\
+Simuladas & & ++ & ++ & ++ & ++\\
+\hline
+\end{tabular}
+\caption{Matriz de Técnicas de Diseño para Pruebas en Realità}
+\label{tab:design_techniques_matrix}
+\end{table}
+
+
+\subsection{Esfuerzo estimado}
+
+La estimación de esfuerzo es un componente vital en la planificación de pruebas de aceptación para el proyecto Realità, al abordar la complejidad y amplitud del sistema autónomo de captura de datos topográficos, es esencial prever y asignar recursos de manera precisa. 
+
+Esta subsección se centra en la evaluación cuidadosa de las tareas relacionadas con las pruebas, considerando factores como la magnitud de la implementación, la diversidad de las técnicas de prueba y las posibles contingencias, una estimación realista y fundamentada no solo facilita la asignación adecuada de recursos, sino que también sirve como un indicador crucial para evaluar la viabilidad temporal y financiera del proyecto Realità.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l |r|}
+\hline
+\textbf{Actividad} & \textbf{Esfuerzo (horas)} \\
+\hline
+Plan de pruebas & 20 \\
+Fase de planificación y control & 80 \\
+Gerencia de pruebas & 48 \\
+Gerencia de configuración de pruebas & 28 \\
+Soporte metodológico & 44 \\
+Fase de preparación & 32 \\
+Fase de especificación & 80 \\
+Fase de ejecución & 200 \\
+Fase de finalización & 16 \\
+\hline
+\textbf{Total} & \textbf{548} \\
+\hline
+\end{tabular}
+\caption{Esfuerzo estimado para el proceso de pruebas}
+\label{tab:estimated_effort}
+\end{table}
+
+
+\subsection{Planificación}
+
+La planificación meticulosa es esencial para el éxito de cualquier proyecto, y las pruebas de aceptación para Realità no son la excepción, en esta fase, se delinea un camino claro que abarca desde la elaboración del plan de pruebas hasta la finalización del informe de resultados y conclusiones, cada actividad se ha calendarizado de manera estratégica para cumplir con el ambicioso objetivo de completar el proyecto dentro del periodo del 10 de marzo al 30 de junio. 
+
+Con un enfoque organizado y detallado, se busca asegurar la eficiencia y efectividad en cada etapa del proceso, contribuyendo así al desarrollo exitoso del sistema autónomo de captura de datos topográficos.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Actividad} & \textbf{Inicio} & \textbf{Fin} & \textbf{Responsable} \\
+\hline
+Plan de pruebas & 10/03 & 19/03 & Equipo de Pruebas \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Fase de Planificación}} \\
+\hline
+Elaboración del documento de plan de pruebas & 20/03 & 31/03 & Líder de Pruebas \\
+Revisión del plan con el equipo & 01/04 & 09/04 & Equipo de Pruebas \\
+Configuración de pruebas & 10/04 & 23/04 & Ingeniero de Configuración \\
+Soporte metodológico & 24/04 & 07/05 & Especialista en Metodología \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Fase de Preparación}} \\
+\hline
+Elaboración de casos de prueba & 15/03 & 31/03 & Analista de Pruebas \\
+Revisión de casos de prueba & 01/04 & 03/04 & Equipo de Pruebas \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Fase de Ejecución}} \\
+\hline
+Ejecución de pruebas & 10/05 & 26/05 & Equipo de Pruebas \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Fase de Finalización}} \\
+\hline
+Informe de resultados y conclusiones & 27/05 & 28/05 & Líder de Pruebas \\
+\hline
+\end{tabular}
+\caption{Planificación de Pruebas de Aceptación para \textit{Realità}}
+\label{tab:planning}
+\end{table}
+
+\section{Amenazas, riesgos y medidas}
+
+El entorno de pruebas para el proyecto Realità no está exento de desafíos potenciales y riesgos que podrían afectar el éxito de las pruebas de aceptación, por lo anterior se hace necesario identificar, evaluar y gestionar estas amenazas de manera proactiva garantizado la integridad y la eficacia del proceso de prueba. 
+
+En esta subsección, se abordarán posibles amenazas y riesgos, desde limitaciones tecnológicas hasta cambios inesperados en los requisitos, y se propondrán medidas mitigadoras específicas. 
+
+\begin{enumerate}
+  \item Posible retraso en la entrega a prueba: en caso de retrasos, se utilizará la estrategia de prueba para determinar las pruebas omitidas, asegurando una cobertura adecuada incluso bajo restricciones de tiempo.
+  \item Equipo de desarrollo disuelto después de la entrega: se garantizará la presencia de al menos un desarrollador experimentado durante la ejecución de pruebas para abordar cualquier problema inesperado y mantener el conocimiento del sistema.
+  \item Disponibilidad limitada del experto de dominio: se planificará de manera adecuada, anticipando posibles retrasos y asegurando la máxima disponibilidad del experto de dominio cuando sea necesario.
+  \item Diseñadores trabajando en el diseño funcional y guías de usuario: se garantizará la disponibilidad oportuna de los diseñadores para mantener la coherencia y reproducibilidad en el diseño funcional y las guías de usuario.
+\end{enumerate}
+
+\section{Infraestructura}
+
+\subsection{Entorno de pruebas}
+
+El equipo de pruebas está compuesto por cinco personas, durante el proyecto de prueba, se debe disponer de dos (2) PC con una configuración de hardware estándar y el software estándar utilizado por Solidly Embedded Ltd. (para software especial, consulte la sección) que requiere un espacio mínimo de 20 GB en el directorio de gestión del producto.
+
+\subsection{Herramientas de pruebas}
+
+Las siguientes herramientas de prueba son esenciales:
+
+\begin{enumerate}
+  \item Herramienta de gestión de defectos \textit{DefectTracker}.
+  \item Herramienta de gestión de cambios \textit{ChangeMaster}.
+  \item Software de planificación.
+  \item Hardware adicional para rastrear el comportamiento interno eferente a la captura de información topográfica.
+\end{enumerate}
+
+\subsection{Entorno}
+
+Se utiliza el entorno de prueba estándar, los probadores utilizan su espacio de oficina y campo durante el proyecto de prueba.
+
+\section{Organización de pruebas}
+
+\subsection{Roles de pruebas}
+
+Los siguientes roles de prueba son necesarios en este proyecto:
+
+\begin{enumerate}
+  \item Ingeniero de pruebas.
+  \item Gerente de pruebas.
+  \item Soporte metodológico.
+  \item Soporte técnico.
+  \item Experto en dominio.
+  \item Gerente de configuración de pruebas.
+\end{enumerate}
+
+
+\subsection{Personal de Pruebas}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l |l |l|}
+\hline
+\textbf{Función} & \textbf{Nombre} & \textbf{Equivalente a Tiempo Completo} \\
+\hline
+Gerente de Pruebas & T. Testware & 0.20 \\
+Probador & P. Testcase & 1.00 \\
+Probador & F. Testscript & 1.00 \\
+Soporte & G. Allround & 1.00 \\
+Experto en Dominio & A. Experto & 0.60 (durante la ejecución de pruebas) \\
+\hline
+\end{tabular}
+\caption{Funciones y equivalente a tiempo completo del personal de pruebas}
+\label{tab:test_staff}
+\end{table}
+
+
+\section{Entregables de pruebas}
+
+\subsection{Documentación del proyecto}
+
+Se producirán los siguientes documentos durante el proyecto de prueba:
+
+\begin{enumerate}
+  \item Plan de pruebas: el documento inicial y todas sus versiones anteriores/futuras.
+  \item Informes de defectos: se informan todos los defectos observados.
+  \item Informes semanales: informes de progreso realizados por el gerente de pruebas.
+  \item Recomendación para la liberación: formalmente es el final de la fase de ejecución de pruebas.
+  \item Informe de revisión: este informe da una evaluación del proceso de pruebas durante el proyecto.
+\end{enumerate}
+
+\subsection{Testware}
+
+Los siguientes documentos son entregables del proyecto de prueba:
+
+\begin{enumerate}
+  \item Guion de pruebas: una descripción de cómo se realiza la prueba. Contiene acciones y verificaciones, relacionadas con casos de prueba, indicando la secuencia de ejecución.
+  \item Escenario de pruebas: un micro-plan de pruebas que coordina la ejecución de varios guiones de prueba y asigna probadores a los guiones de prueba.
+  \item Conjunto de datos inicial: archivos y conjuntos de datos necesarios para iniciar ciertas pruebas.
+\end{enumerate}
+
+\subsection{Almacenamiento}
+
+La estructura de directorios mostrada en la Tabla \ref{tab:directory_structure} está implementada en el servidor central de Solidly Embedded Ltd, el directorio se almacena en el directorio de gestión de productos: \texttt{\textbackslash\textbackslash PROD\_MANAG}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l| l|}
+\hline
+\textbf{Directorio} & \textbf{Contenido} \\
+\hline
+\texttt{ACC\_TEST\_REALITA} & Directorio principal del proyecto \\
+\texttt{PROCDOC} & Documentación del proyecto \\
+\texttt{WORK\_TESTWARE} & Directorio de trabajo para testware \\
+\texttt{FINAL\_TESTWARE} & Directorio para archivar testware \\
+\texttt{DEFECTS} & Base de datos para el almacenamiento de defectos \\
+\texttt{OTHER} & Todos los demás documentos utilizados o producidos \\
+\hline
+\end{tabular}
+\caption{Estructura de directorios}
+\label{tab:directory_structure}
+\end{table}
+
+\section{Gestión de configuración}
+
+\subsection{Control del proceso de pruebas}
+
+El progreso de las pruebas y el agotamiento del presupuesto y el tiempo se monitorean y informan durante el proyecto de pruebas. Esto se realiza semanalmente y los resultados se informan en la reunión semanal de progreso.
+
+\subsection{Gestión de defectos}
+
+Para la gestión de defectos, se utiliza la herramienta "DefectTracker", se sigue el procedimiento estándar de defectos (SolEmb 76.1 "Procedimiento de defectos").
+
+\subsection{Métricas}
+
+El jefe de pruebas realiza un seguimiento de las siguientes métricas:
+
+\begin{enumerate}
+    \item Número de defectos abiertos por categoría de gravedad en un momento dado.
+    \item Número de defectos resueltos en un período por categoría de gravedad.
+    \item Número total de defectos detectados.
+    \item Número de retrabajos por defecto.
+    \item Número total de retrabajos.
+\end{enumerate}
+
+\subsection{Ítems de gestión de configuración}
+
+El plan de pruebas está sujeto a la gestión de configuración, comenzando con la primera versión completa. El resto del testware se somete a la gestión de configuración después de la fase de finalización. Los cambios en la infraestructura de pruebas están sujetos a la gestión de configuración del departamento de soporte técnico de Solidly Embedded Ltd.
+
+
+
+\newpage
+
+
+\section{Bibliografía}
+
+\begin{enumerate}
+      \item Bart Broekman, Edwin Notenboom. \emph{Testing Embedded Software}. Addison-Wesley Professional, 2003. ISBN: 978-0201795238
+  % Agrega más referencias según sea necesario
+\end{enumerate}
+
+
+
+\end{document}
