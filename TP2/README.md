@@ -7,7 +7,7 @@
 
 
 
-##  Descripción 
+##  1. Descripción 
 
 ¡Bello bello! Este repo contiene el desarrollo de una API para manejar lucesitas mágicas, ¡sí, LEDs! Todo esto bajo la técnica super cool de Desarrollo Dirigido por Pruebas (Test Driven Development - TDD). La API te permite controlar 16 LEDs con dos modos (encendido y apagado), cambiar el estado de uno sin afectar a los otros, cambiar todos al mismo tiempo y saber el estado actual de cada uno. ¡Qué chulo!
 
@@ -15,7 +15,7 @@
     <img width="50%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/53e0fd43-4666-4726-90ff-de5c54dd8c42"> 
 </p>
 
-## Requerimientos del Driver
+## 2. Requerimientos del Driver
 
 1. ¡Controla 16 lucesitas!
 2. ¡Cambia el estado de una sin meter la pata con las demás!
@@ -32,27 +32,27 @@
 
 
 
-## Contenido del Proyecto 🏗️
+## 3. Contenido del Proyecto 🏗️
 - `src:` acá están los archivos mágicos que hacen funcionar todo  📂. 
 - `inc:` acá están los archivos mágicos que hacen funcionar todo.
 - `test:` ¡Aquí se esconden las pruebas de magia!
 - `vendor:` un lugar opcional para meter librerías chéveres.
 - `README.md:` Este archivo, ¡donde empieza toda la diversión!
 
-## Uso del Repo
+## 4. Uso del Repo
 ¡Sencillo, amiguín! Este repositorio usa pre-commit para chequear el formato y ceedling para correr las pruebas. Así que, sigue estos pasos en tu superordenador:
 
-### Instalación de pre-commit
+### 4.1 Instalación de pre-commit
 ```bash
 pip install pre-commit
 pre-commit install
 ```
-### Instalación de ruby y ceedling
+### 4.2 Instalación de ruby y ceedling
 ```bash
 choco install ruby -y
 gem install ceedling
 ```
-### compilación de pruebas
+### 4.3 compilación de pruebas
 ```bash
 ceedling
 
