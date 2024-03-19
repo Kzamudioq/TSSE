@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <p align="center">💡 Driver	de	LEDs	:	Test  💡</p>
-  `Trabajo práctico 2`
+  Trabajo práctico 2
 </h1>
 
 
