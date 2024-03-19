@@ -1,5 +1,5 @@
 
-* Plantilla IEEE-830 para latex
+* Plantilla test de software para latex
 
 Realizado en orgmode. Para obtener los archivos latex.
 
@@ -13,7 +13,7 @@ Motivado por no ver una plantilla para esta especificación en formato latex.
 + (Opcional) TeXstudio
 
 
-En caso de no usar emacs, se puede simplemente descargar el archivo [[template_ieee830.tex][tex]].
+En caso de no usar emacs, se puede simplemente descargar el archivo [[test.tex][tex]].
 
 -----
 
