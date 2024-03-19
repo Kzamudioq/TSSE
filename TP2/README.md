@@ -70,7 +70,7 @@ IGNORED:  0
 
 ```
 <p align="center" width="100%">
-    <img width="60%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/65450736-14c8-494a-b95c-99391fbddd84"> 
+    <img width="100%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/65450736-14c8-494a-b95c-99391fbddd84"> 
 </p>
 
 
