@@ -1,8 +1,14 @@
 # Driver	de	LEDs	:	Test 💡🧪
-
+`Trabajo práctico 2`
 
 ## Descripción
 Este repositorio contiene el desarrollo de una API para controlar LEDs utilizando la metodología de Desarrollo Guiado por Pruebas (Test Driven Development - TDD). La API permite manejar 16 LEDs de dos estados (encendido y apagado), cambiar el estado de un LED individual sin afectar a los demás, cambiar el estado de todos los LEDs en una sola operación y recuperar el estado actual de un LED.
+
+---
+
+<p align="center" width="100%">
+    <img width="60%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/de274c78-c5b1-4ec7-9dfb-88a55dcb7fcb"> 
+</p>
 
 ## Requerimientos del Driver
 
@@ -14,6 +20,19 @@ Este repositorio contiene el desarrollo de una API para controlar LEDs utilizand
 6. Para prender una luz, hay que ponerle un 1, para apagarla, un 0.
 7. La primera luz es la más flojita, y la última la más fuerte.
 8. Si el aparatico se resetea, ¡todas las luces deben estar apagadas!
+
+<p align="center" width="100%">
+    <img width="100%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/bb4a8578-0adb-4d01-b9e4-c2181c62017a"> 
+</p>
+
+---
+
+## Contenido del Proyecto 🏗️
+- `src:` acá están los archivos mágicos que hacen funcionar todo  📂. 
+- `inc:` acá están los archivos mágicos que hacen funcionar todo.
+- `test:` ¡Aquí se esconden las pruebas de magia!
+- `vendor:` un lugar opcional para meter librerías chéveres.
+- `README.md:` Este archivo, ¡donde empieza toda la diversión!
 
 ## Uso del Repo
 ¡Sencillo, amiguín! Este repositorio usa pre-commit para chequear el formato y ceedling para correr las pruebas. Así que, sigue estos pasos en tu superordenador:
@@ -46,12 +65,7 @@ IGNORED:  0
 
 ```
 
-## Estructura del Repositorio 🏗️
-- `src:` acá están los archivos mágicos que hacen funcionar todo  📂. 
-- `inc:` acá están los archivos mágicos que hacen funcionar todo.
-- `test:` ¡Aquí se esconden las pruebas de magia!
-- `vendor:` un lugar opcional para meter librerías chéveres.
-- `README.md:` Este archivo, ¡donde empieza toda la diversión!
+
 
 
 ## Contribuciones 🤝
