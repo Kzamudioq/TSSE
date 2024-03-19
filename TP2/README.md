@@ -30,7 +30,7 @@
     <img width="50%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/bb4a8578-0adb-4d01-b9e4-c2181c62017a"> 
 </p>
 
----
+
 
 ## Contenido del Proyecto 🏗️
 - `src:` acá están los archivos mágicos que hacen funcionar todo  📂. 
