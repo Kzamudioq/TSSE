@@ -41,5 +41,6 @@ ceedling
 - `README.md:` Este archivo, ¡donde empieza toda la diversión!
 
 
-##Contribuciones
+## Contribuciones
+
 ¡Estamos más felices que un Minion en Bananalandia de recibir tus contribuciones! ¡Crea un "pull request" en GitHub para proponer tus cambios!
