@@ -13,7 +13,7 @@ Motivado por no ver una plantilla para esta especificación en formato latex.
 + (Opcional) TeXstudio
 
 
-En caso de no usar emacs, se puede simplemente descargar el archivo [[test.tex][tex]].
+En caso de no usar emacs, se puede simplemente descargar el archivo [[testing.tex][test]].
 
 -----
 
