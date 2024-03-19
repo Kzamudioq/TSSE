@@ -12,7 +12,7 @@ Este repositorio contiene el desarrollo de una API para controlar LEDs utilizand
 
 ---
 
-<p align="center" width="100%">
+<p align="center" width="20%">
     <img width="60%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/94efffa5-7856-4540-b27d-3c685f9240f5"> 
 </p>
 
