@@ -42,7 +42,7 @@
 - `README.md:` Este archivo, ¡donde empieza toda la diversión!
 
 ## 4. Uso del Repo
-¡Sencillo, amiguín! Este repositorio usa pre-commit para chequear el formato y ceedling para correr las pruebas. Así que, sigue estos pasos en tu superordenador:
+¡Es hora de poner manos a la obra y hacer brillar tus LEDs! Sigue estos sencillos pasos en tu superordenador:
 
 ### 4.1 Instalación de pre-commit
 ```bash
