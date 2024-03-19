@@ -23,24 +23,37 @@ Este repositorio contiene el desarrollo de una API para controlar LEDs utilizand
 pip install pre-commit
 pre-commit install
 ```
-### Instalación de pre-commit
+### Instalación de ruby y ceedling
 ```bash
 choco install ruby -y
 gem install ceedling
 ```
-### Instalación de pre-commit
+### compilación de pruebas
 ```bash
 ceedling
+
+Test 'test_leds.c'
+------------------
+Running test_leds.out...
+
+--------------------
+OVERALL TEST SUMMARY
+--------------------
+TESTED:  12
+PASSED:  12
+FAILED:   0
+IGNORED:  0
+
 ```
 
-## Estructura del Repositorio
-- `src:` acá están los archivos mágicos que hacen funcionar todo.
+## Estructura del Repositorio 🏗️
+- `src:` acá están los archivos mágicos que hacen funcionar todo  📂. 
 - `inc:` acá están los archivos mágicos que hacen funcionar todo.
 - `test:` ¡Aquí se esconden las pruebas de magia!
 - `vendor:` un lugar opcional para meter librerías chéveres.
 - `README.md:` Este archivo, ¡donde empieza toda la diversión!
 
 
-## Contribuciones
+## Contribuciones 🤝
 
 ¡Estamos más felices que un Minion en Bananalandia de recibir tus contribuciones! ¡Crea un "pull request" en GitHub para proponer tus cambios!
