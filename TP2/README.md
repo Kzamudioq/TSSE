@@ -1,5 +1,5 @@
 # Driver	de	LEDs	:	Test 💡🧪
-------------------------
+
 
 ## Descripción
 Este repositorio contiene el desarrollo de una API para controlar LEDs utilizando la metodología de Desarrollo Guiado por Pruebas (Test Driven Development - TDD). La API permite manejar 16 LEDs de dos estados (encendido y apagado), cambiar el estado de un LED individual sin afectar a los demás, cambiar el estado de todos los LEDs en una sola operación y recuperar el estado actual de un LED.
