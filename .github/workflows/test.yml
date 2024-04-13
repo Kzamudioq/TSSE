@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Print current directory
         run: pwd
+      - name: pasar a directorio aterior
+        run: cd..
       - name: lista de directorios
         run: ls -a
       - name: Change Directory to TP4
