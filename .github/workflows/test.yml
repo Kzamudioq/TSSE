@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: lista de directorios
-        run: git ls-tree HEAD
+        run: ls
       - name: Change Directory to TP4
         run: cd TSSE/TP4
       - uses: actions/checkout@v4
