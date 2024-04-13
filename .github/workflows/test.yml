@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Change Directory to TP4
-        run: cd TP4
+        run: cd TSSE/TP4
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
       - uses: ruby/setup-ruby@v1
