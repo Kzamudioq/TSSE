@@ -14,19 +14,37 @@ jobs:
   verifications:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
-      - uses: ruby/setup-ruby@v1
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Cambiar al directorio donde se encuentra el archivo .pre-commit-config.yaml
+      - name: Change to project directory
+        run: cd TP4   # Reemplaza "TP4" con el nombre de tu carpeta si es diferente
+
+      # Verificar si el archivo .pre-commit-config.yaml está presente
+      - name: Check for .pre-commit-config.yaml
+        run: ls -l
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.7"
+
       - name: Install Ceedling
         run: gem install ceedling
+
       - name: Install GCov Reporter
         run: pip install gcovr
+
       - name: Run Format Validations
         uses: pre-commit/action@v3.0.0
+
       - name: Run Unit Tests
         run: ceedling clobber gcov:all utils:gcov
+
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()
@@ -34,6 +52,7 @@ jobs:
           name: Ceedling Unit Tests
           path: build/artifacts/gcov/report.xml
           reporter: jest-junit
+
       - name: Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
@@ -45,8 +64,10 @@ jobs:
           indicators: true
           output: both
           thresholds: "60 80"
+
       - name: Output to Job Summary
         run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
       - name: Add Coverage PR Comment
         uses: marocchino/sticky-pull-request-comment@v2
         if: github.event_name == 'pull_request'
