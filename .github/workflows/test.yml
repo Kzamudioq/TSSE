@@ -14,7 +14,7 @@ jobs:
   verifications:
     runs-on: ubuntu-latest
     steps:
-      - name: lista de directorios
+      - name: List directories and files
         run: ls
       - name: Change Directory to TP4
         run: cd TSSE/TP4
