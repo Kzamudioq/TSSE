@@ -2,7 +2,7 @@ name: Validations
 
 on:
   pull_request:
-    branches: [master, main, develop]
+    branches: [master, main, development]
 
 permissions:
   contents: read
@@ -14,22 +14,11 @@ jobs:
   verifications:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      # Cambiar al directorio donde se encuentra el archivo .pre-commit-config.yaml
-      - name: Change to project directory
-        run: cd TP4   # Reemplaza "TP4" con el nombre de tu carpeta si es diferente
-
-      # Verificar si el archivo .pre-commit-config.yaml está presente
-      - name: Check for .pre-commit-config.yaml
-        run: ls -l
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v4
+        with:
+          path: TP4  # Especifica el directorio TP4 para la acción de checkout
+      - uses: actions/setup-python@v4
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.7"
       - name: Install Ceedling
@@ -59,11 +48,11 @@ jobs:
           output: both
           thresholds: "60 80"
       - name: Output to Job Summary
-        run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
-
+        run: cat TP4/code-coverage-results.md >> $GITHUB_STEP_SUMMARY  # Ruta ajustada para el resumen de resultados
       - name: Add Coverage PR Comment
         uses: marocchino/sticky-pull-request-comment@v2
         if: github.event_name == 'pull_request'
         with:
           recreate: true
-          path: code-coverage-results.md
+          path: TP4/code-coverage-results.md  # Ruta ajustada para los comentarios de PR
+
