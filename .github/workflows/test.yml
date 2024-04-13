@@ -14,11 +14,10 @@ jobs:
   verifications:
     runs-on: ubuntu-latest
     steps:
-
       - name: Print current directory
         run: pwd
-      - name: List directories and files
-        run: ls
+      - name: lista de directorios
+        run: ls -a
       - name: Change Directory to TP4
         run: cd TSSE/TP4
       - uses: actions/checkout@v4
