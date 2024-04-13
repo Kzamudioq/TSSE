@@ -1,4 +1,4 @@
-ame: Validations
+name: Validations
 
 on:
   pull_request:
