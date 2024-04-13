@@ -11,4 +11,4 @@ repos:
     rev: v15.0.6
     hooks:
     -   id: clang-format
-        name: Formating C files with Clang-Format
+        name: Formatting C files with Clang-format
