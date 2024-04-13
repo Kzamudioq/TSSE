@@ -2,7 +2,7 @@ name: Validations
 
 on:
   pull_request:
-    branches: [main, develop]
+    branches: [master, main, development]
 
 permissions:
   contents: read
@@ -23,10 +23,8 @@ jobs:
         run: gem install ceedling
       - name: Install GCov Reporter
         run: pip install gcovr
-      - name: Change Directory to TSSE/TP4
-        run: cd TP4
       - name: Run Format Validations
-        uses: pre-commit/action@v3.0.0
+        run: pre-commit run --all-files
       - name: Run Unit Tests
         run: ceedling clobber gcov:all utils:gcov
       - name: Test Report
