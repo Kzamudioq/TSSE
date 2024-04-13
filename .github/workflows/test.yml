@@ -18,8 +18,8 @@ jobs:
         run: pwd
       - name: pasar a directorio aterior
         run: cd ..
-      - name: Print current directory
-        run: pwd
+      - name: contenido del directorio
+        run: ls /home/runner/work/TSSE
       - name: Change Directory to TP4
         run: cd TSSE/TP4
       - uses: actions/checkout@v4
