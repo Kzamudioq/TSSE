@@ -19,7 +19,7 @@ jobs:
 
       # Cambiar al directorio donde se encuentra el archivo .pre-commit-config.yaml
       - name: Change to project directory
-        run: cd TP4   # Reemplaza "TP4" con el nombre de tu carpeta si es diferente
+        run: cd TP4
 
       # Verificar si el archivo .pre-commit-config.yaml está presente
       - name: Check for .pre-commit-config.yaml
