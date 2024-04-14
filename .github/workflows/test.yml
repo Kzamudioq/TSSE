@@ -40,7 +40,7 @@ jobs:
         run: pip install gcovr
 
       - name: Change to tsse/t4 directory
-        run: cd T4
+        run: cd TP4
 
       # Run Pre-Commit Checks only in TP4 directory
       - name: Run Pre-Commit Checks
