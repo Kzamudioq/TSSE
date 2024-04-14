@@ -36,6 +36,9 @@ jobs:
         run: pip install gcovr
         working-directory: TP4
 
+      - name: List files in TP4 directory
+        run: ls TP4
+
       - name: Run Format Validations
         uses: pre-commit/action@v3.0.0
         with:
