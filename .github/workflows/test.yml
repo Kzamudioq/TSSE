@@ -1,8 +1,8 @@
-name: Validations
+name: Validaciones
 
 on:
   pull_request:
-    branches: [master, main, development]
+    branches: [master, main, develop]
 
 permissions:
   contents: read
@@ -16,48 +16,46 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Print current directory
-        run: pwd
-      - name: pasar a directorio aterior
-        run: cd ..
-      - name: contenido del directorio TSSE
-        run: ls /home/runner/work/TSSE/TSSE
-      - name: contenido del directorio home
-        run: ls /home
-      - name: contenido del directorio runner
-        run: ls /home/runner
-      - name: contenido del directorio work
-        run: ls /home/runner/work
-      - name: Change Directory to TP4
-        run: cd TP4
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
-      - uses: ruby/setup-ruby@v1
+        with:
+          path: TP4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.7"
-      - name: Install pre-commit
-        run: python -m pip install pre-commit
+
       - name: Install Ceedling
         run: gem install ceedling
+        working-directory: TP4
+
       - name: Install GCov Reporter
         run: pip install gcovr
-      - name: Run pre-commit
-        run: |
-          cd TP4
-          pre-commit run
+        working-directory: TP4
+
+      - name: Run Format Validations
+        uses: pre-commit/action@v3.0.0
+        with:
+          path: TP4
+
       - name: Run Unit Tests
         run: ceedling clobber gcov:all utils:gcov
+        working-directory: TP4
+
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()
         with:
           name: Ceedling Unit Tests
-          path: build/artifacts/gcov/report.xml
+          path: TP4/build/artifacts/gcov/report.xml
           reporter: jest-junit
+
       - name: Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
-          filename: build/artifacts/gcov/GcovCoverageCobertura.xml
+          filename: TP4/build/artifacts/gcov/GcovCoverageCobertura.xml
           badge: true
           format: markdown
           hide_branch_rate: false
@@ -65,11 +63,13 @@ jobs:
           indicators: true
           output: both
           thresholds: "60 80"
+
       - name: Output to Job Summary
-        run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+        run: cat TP4/code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
       - name: Add Coverage PR Comment
         uses: marocchino/sticky-pull-request-comment@v2
         if: github.event_name == 'pull_request'
         with:
           recreate: true
-          path: code-coverage-results.md
+          path: TP4/code-coverage-results.md
