@@ -25,10 +25,6 @@ jobs:
       - name: List files TP4
         run: ls -a TP4
 
-      # Set working directory to TP4
-      - name: Change to project directory
-        run: cd TP4
-
       - name: Setup Python
         uses: actions/setup-python@v4
 
@@ -43,11 +39,12 @@ jobs:
       - name: Install GCov Reporter
         run: pip install gcovr
 
-      # Run Pre-Commit Checks
+      # Run Pre-Commit Checks only in TP4 directory
       - name: Run Pre-Commit Checks
         uses: pre-commit/action@v3.0.0
         with:
           path: .pre-commit-config.yaml
+          args: ['--files', 'TP4']
 
       # Rest of the workflow steps remain the same
       - name: Run Unit Tests
