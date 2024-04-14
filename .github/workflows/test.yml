@@ -43,8 +43,7 @@ jobs:
       - name: Run Pre-Commit Checks
         uses: pre-commit/action@v3.0.0
         with:
-          path: .pre-commit-config.yaml
-          files: TP4
+          path: ./tp4/.pre-commit-config.yaml
 
       # Rest of the workflow steps remain the same
       - name: Run Unit Tests
