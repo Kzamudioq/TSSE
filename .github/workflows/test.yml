@@ -16,8 +16,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          path: TP4
+
+      - name: lista de directorios
+        run: ls
 
       - name: Setup Python
         uses: actions/setup-python@v4
