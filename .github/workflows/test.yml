@@ -35,23 +35,19 @@ jobs:
 
       - name: Install Ceedling
         run: gem install ceedling
-        working-directory: TP4
 
       - name: Install GCov Reporter
         run: pip install gcovr
-        working-directory: TP4
-
-      - name: List files in the working directory
-        run: ls
 
       - name: Run pre-commit
         run: |
           cd TP4
-          pre-commit run
+          pre-commit/action@v3.0.0
 
       - name: Run Unit Tests
-        run: ceedling clobber gcov:all utils:gcov
-        working-directory: TP4
+        run:
+          cd TP4
+          ceedling clobber gcov:all utils:gcov
 
       - name: Test Report
         uses: dorny/test-reporter@v1
