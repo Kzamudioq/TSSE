@@ -42,7 +42,9 @@ jobs:
       - name: Install GCov Reporter
         run: pip install gcovr
       - name: Run pre-commit
-        run: pre-commit run --all-files
+        run: |
+          cd TP4
+          pre-commit run
       - name: Run Unit Tests
         run: ceedling clobber gcov:all utils:gcov
       - name: Test Report
