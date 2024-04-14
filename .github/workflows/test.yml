@@ -44,9 +44,6 @@ jobs:
           cd TP4
           pre-commit run
 
-      - name: Run Format Validations
-        uses: pre-commit/action@v3.0.0
-
       - name: Run Unit Tests
         run: ceedling clobber gcov:all utils:gcov
         working-directory: TP4
