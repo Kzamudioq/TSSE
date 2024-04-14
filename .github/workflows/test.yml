@@ -23,7 +23,7 @@ jobs:
         run: ls
 
       - name: List files TP4
-        run: ls TP4
+        run: ls -a TP4
 
       - name: Setup Python
         uses: actions/setup-python@v4
