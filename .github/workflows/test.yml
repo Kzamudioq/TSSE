@@ -36,9 +36,6 @@ jobs:
         run: pip install gcovr
         working-directory: TP4
 
-      - name: List files in TP4 directory TSSE
-        run: ls TSSE
-
       - name: Run pre-commit
         run: |
           cd TP4
