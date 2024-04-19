@@ -7,12 +7,12 @@
 
 
 
-##  1. Descripción 
+##  1. Descripción
 
 ¡Bello bello! Este repo contiene el desarrollo de una API para manejar lucesitas mágicas, ¡sí, LEDs! Todo esto bajo la técnica super cool de Desarrollo Dirigido por Pruebas (Test Driven Development - TDD). La API te permite controlar 16 LEDs con dos modos (encendido y apagado), cambiar el estado de uno sin afectar a los otros, cambiar todos al mismo tiempo y saber el estado actual de cada uno. ¡Qué chulo!
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/53e0fd43-4666-4726-90ff-de5c54dd8c42"> 
+    <img width="50%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/53e0fd43-4666-4726-90ff-de5c54dd8c42">
 </p>
 
 ## 2. Requerimientos del Driver
@@ -29,13 +29,13 @@
 8. **¡Si el aparatico se resetea, todas las Luces Deben Estar Apagadas!**: ¿no es justo?
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/bb4a8578-0adb-4d01-b9e4-c2181c62017a"> 
+    <img width="50%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/bb4a8578-0adb-4d01-b9e4-c2181c62017a">
 </p>
 
 
 
 ## 3. Contenido del Proyecto 🏗️
-- `src:` acá están los archivos mágicos que hacen funcionar todo  📂. 
+- `src:` acá están los archivos mágicos que hacen funcionar todo  📂.
 - `inc:` acá están los archivos mágicos que hacen funcionar todo.
 - `test:` ¡Aquí se esconden las pruebas de magia!
 - `vendor:` un lugar opcional para meter librerías chéveres.
@@ -72,13 +72,10 @@ IGNORED:  0
 
 ```
 <p align="center" width="100%">
-    <img width="100%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/65450736-14c8-494a-b95c-99391fbddd84"> 
+    <img width="100%" src="https://github.com/Kzamudioq/TSSE/assets/138271936/65450736-14c8-494a-b95c-99391fbddd84">
 </p>
 
 
 ## Contribuciones 🤝
 
 ¡Estamos más felices que un Minion en Bananalandia de recibir tus contribuciones! ¡Crea un "pull request" en GitHub para proponer tus cambios!
-
-
-

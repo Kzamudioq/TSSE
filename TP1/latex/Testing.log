@@ -462,7 +462,7 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
 e.sty
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2022-07-04 L3 programming layer (loader) 
+Package: expl3 2022-07-04 L3 programming layer (loader)
 
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
@@ -570,7 +570,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/grffile\grffile.sty
 Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
 y)
-Package grffile Info: This package is an empty stub for compatibility on input 
+Package grffile Info: This package is an empty stub for compatibility on input
 line 40.
 )
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
@@ -1015,7 +1015,7 @@ Package hyperref Info: Link coloring OFF on input line 49.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: twoside
 * h-part:(L,W,R)=(56.9055pt, 469.47049pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 717.00946pt, 56.9055pt)
 * \paperwidth=597.50787pt
@@ -1054,7 +1054,7 @@ goFIUBA.pdf>]
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1076,7 +1076,7 @@ LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1093,7 +1093,7 @@ LaTeX Info: Redefining \. on input line 128.
 LaTeX Info: Redefining \% on input line 128.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.6104pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.6104pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1103,10 +1103,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5 <./Figuras/Prototipo.png>]
 <./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf, id=336, 845.07718pt x 5
 97.19106pt>
-File: ./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf Graphic file (type 
+File: ./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf Graphic file (type
 pdf)
 <use ./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf>
-Package pdftex.def Info: ./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf 
+Package pdftex.def Info: ./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf
  used on input line 140.
 (pdftex.def)             Requested size: 445.99553pt x 315.17023pt.
 
@@ -1116,7 +1116,7 @@ LaTeX Info: Redefining \. on input line 156.
 LaTeX Info: Redefining \% on input line 156.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.61858pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.61858pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1128,7 +1128,7 @@ LaTeX Info: Redefining \. on input line 189.
 LaTeX Info: Redefining \% on input line 189.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.6104pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.6104pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1140,7 +1140,7 @@ LaTeX Info: Redefining \. on input line 245.
 LaTeX Info: Redefining \% on input line 245.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1152,7 +1152,7 @@ LaTeX Info: Redefining \. on input line 292.
 LaTeX Info: Redefining \% on input line 292.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1164,7 +1164,7 @@ LaTeX Info: Redefining \. on input line 333.
 LaTeX Info: Redefining \% on input line 333.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1176,7 +1176,7 @@ LaTeX Info: Redefining \. on input line 383.
 LaTeX Info: Redefining \% on input line 383.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.6104pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.6104pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1188,7 +1188,7 @@ LaTeX Info: Redefining \. on input line 445.
 LaTeX Info: Redefining \% on input line 445.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.61858pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.61858pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1200,7 +1200,7 @@ LaTeX Info: Redefining \. on input line 490.
 LaTeX Info: Redefining \% on input line 490.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.6104pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.6104pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1217,7 +1217,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 582.
 LaTeX Info: Redefining \% on input line 582.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.61858pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.61858pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1226,7 +1226,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 Overfull \hbox (27.57298pt too wide) in paragraph at lines 587--614
- [][] 
+ [][]
  []
 
 
@@ -1235,7 +1235,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 626.
 LaTeX Info: Redefining \% on input line 626.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1247,7 +1247,7 @@ LaTeX Info: Redefining \. on input line 646.
 LaTeX Info: Redefining \% on input line 646.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1259,7 +1259,7 @@ LaTeX Info: Redefining \. on input line 700.
 LaTeX Info: Redefining \% on input line 700.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1276,7 +1276,7 @@ LaTeX Info: Redefining \. on input line 752.
 LaTeX Info: Redefining \% on input line 752.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.61858pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.61858pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1288,7 +1288,7 @@ LaTeX Info: Redefining \. on input line 762.
 LaTeX Info: Redefining \% on input line 762.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.6104pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.6104pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1300,7 +1300,7 @@ LaTeX Info: Redefining \. on input line 774.
 LaTeX Info: Redefining \% on input line 774.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 14.61858pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.61858pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
@@ -1316,7 +1316,7 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `template_ieee830.out' has not changed.
 (rerunfilecheck)             Checksum: 7D901472041BA376633F0B200BC9E1E6;10266.
- ) 
+ )
 Here is how much of TeX's memory you used:
  27130 strings out of 478338
  530975 string characters out of 2836700
@@ -1341,4 +1341,3 @@ PDF statistics:
  958 PDF objects out of 1000 (max. 8388607)
  166 named destinations out of 1000 (max. 500000)
  492 words of extra memory for PDF output out of 10000 (max. 10000000)
-

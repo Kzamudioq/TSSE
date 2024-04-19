@@ -30,22 +30,20 @@ SPDX-License-Identifier: MIT
 
 /* === Macros definitions ====================================================================== */
 
-
-
 /* === Private data type declarations ========================================================== */
 /* === Private variable declarations =========================================================== */
 
-static uint16_t *led_port;
+static uint16_t * led_port;
 
 /* === Public function implementation ========================================================== */
 
 /**
  * @brief Inicializa el controlador de LEDs.
- * 
+ *
  * @param port Puntero al puerto de salida de los LEDs.
  * @return 0 en caso de éxito, -1 si el puerto es nulo.
  */
-int leds_init(uint16_t *port) {
+int leds_init(uint16_t * port) {
     // Verifica si el puerto es nulo
     if (port == NULL) {
         return LED_ERROR_NULL_PORT;
@@ -73,7 +71,7 @@ void leds_deinit(void) {
 
 /**
  * @brief Enciende un LED individual.
- * 
+ *
  * @param led Número de LED a encender (1-16).
  * @return 0 en caso de éxito, -2 si el LED está fuera de rango o el puerto es nulo.
  */
@@ -91,7 +89,7 @@ int leds_turn_on_single(uint16_t led) {
 
 /**
  * @brief Apaga un LED individual.
- * 
+ *
  * @param led Número de LED a apagar (1-8).
  * @return 0 en caso de éxito, -2 si el LED está fuera de rango o el puerto es nulo.
  */
@@ -109,9 +107,10 @@ int leds_turn_off_single(uint16_t led) {
 
 /**
  * @brief Obtiene el estado de un LED individual.
- * 
+ *
  * @param led Número de LED del que se desea obtener el estado (1-8).
- * @return Estado del LED (1 encendido, 0 apagado) o -2 si el LED está fuera de rango o el puerto es nulo.
+ * @return Estado del LED (1 encendido, 0 apagado) o -2 si el LED está fuera de rango o el puerto es
+ * nulo.
  */
 int leds_get_status_single(uint16_t led) {
     // Verifica si el puerto es nulo o el LED está fuera de rango
@@ -125,7 +124,7 @@ int leds_get_status_single(uint16_t led) {
 
 /**
  * @brief Enciende todos los LEDs.
- * 
+ *
  * @return 0 en caso de éxito, -1 si el puerto es nulo.
  */
 int leds_turn_on_all(void) {
@@ -142,7 +141,7 @@ int leds_turn_on_all(void) {
 
 /**
  * @brief Apaga todos los LEDs.
- * 
+ *
  * @return 0 en caso de éxito, -1 si el puerto es nulo.
  */
 int leds_turn_off_all(void) {
@@ -159,7 +158,7 @@ int leds_turn_off_all(void) {
 
 /**
  * @brief Obtiene el estado de todos los LEDs.
- * 
+ *
  * @return Estado de todos los LEDs o -1 si el puerto es nulo.
  */
 int leds_get_status_all(void) {
