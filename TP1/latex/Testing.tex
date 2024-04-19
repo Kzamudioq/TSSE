@@ -42,7 +42,7 @@
     pdftitle={Testing de software en sistemas embebidos},
     pdfkeywords={},
     pdfsubject={},
-    pdfcreator={Emacs 26.2 (Org mode 9.1.9)}, 
+    pdfcreator={Emacs 26.2 (Org mode 9.1.9)},
     pdflang={ spanish }
 }
 
@@ -55,36 +55,36 @@
 \begin{titlepage}
     \begin{center}
         \vspace*{1cm}
-        
+
                 \includegraphics[width=0.8\textwidth]{Figuras/logoFIUBA.pdf} % Ruta al logo de FIUBA
-        
+
         \vspace{1.5cm}
-        
+
         \textbf{\LARGE Realità : prototipo de sistema autónomo para captura de información topográfica}
-        
+
         \vspace{4cm}
         \textbf{\Large Testing de software en sistemas embebidos}
-        
+
         \vspace{1.5cm}
-        
-        
+
+
         \textbf{\Large Escrito por:}\\
         \large Karen Tatiana Zamudio
-        
+
         \vspace{0.8cm}
-        
+
         \textbf{\Large Revisión A}\\
         \large Esteban Volentini
-        
+
         \large Mariano Finochietto
-        
+
         \vfill
-        
-        \textbf{\Large Universidad de Buenos Aires}\\ 
+
+        \textbf{\Large Universidad de Buenos Aires}\\
         \vspace{0.2cm}
-        
+
         \large 14 febrero 2024
-        
+
     \end{center}
 \end{titlepage}
 \newpage
@@ -119,7 +119,7 @@ El desarrollo del proyecto Realità representa un esfuerzo colaborativo destinad
 
 
 \begin{figure}[htpb]
-\centering 
+\centering
 \includegraphics[width=1\textwidth]{./Figuras/Prototipo.png}
 \caption{Prototipo para captura de información de nube de puntos.}
 \label{fig:diagBloques}
@@ -136,7 +136,7 @@ El objetivo principal del proyecto es abordar los desafíos relacionados con la 
 El prototipo se basa en la integración de múltiples sensores, que incluyen sensores GNSS (Sistemas de Navegación Global por Satélite), sensores LIDAR (Detección y Teledetección por Luz y Alcance), un sensor de imagen con profundidad y una IMU (Unidad de Medición Inercial) en su versión inicial, los anteriores componentes trabajan en conjunto para capturar una amplia gama de datos topográficos (fusión de datos  para nube de puntos 3D), desde coordenadas geoespaciales iniciales hasta detalles visuales y altimétricos, con el potencial de escalabilidad a sensores de mayor precisión en futuras etapas del proyecto. La fusión de datos para nube de puntos 3D es una etapa clave en el proceso del sistema autónomo para captura de información topográfica. Comienza con la recopilación de datos de múltiples sensores, incluyendo GNSS, LIDAR, sensor de imagen e IMU, que capturan información topográfica. Estos datos se envían al MicroControlador (MC), donde se combinan y procesan inteligentemente para generar una nube de puntos 3D con coordenada que representa el entorno topográfico, este proceso se   evidencia en la figura 2.
 
 \begin{figure}[htpb]
-\centering 
+\centering
 \includegraphics[width=0.95\textwidth]{./Figuras/Fusión_de_Datos_para_Nube_de_Puntos_3D.pdf}
 \caption{Diagrama de secuencia}
 \label{fig:diagBloques}
@@ -205,9 +205,9 @@ Esta sección ofrece un resumen conciso de los contenidos y la estructura  de ma
 
 \item Infraestructura
 
-\item Organización de pruebas 
+\item Organización de pruebas
 
-\item Entregables de pruebas 
+\item Entregables de pruebas
 
 \item Gestion de configuración
 
@@ -238,7 +238,7 @@ La ejecución de las asignaciones está a cargo de Karen Zamudio, quien desempe�
 \label{sec:requisitos-especificos}
 
 
-En el ámbito del test de aceptación, la atención se dirige exclusivamente al dispositivo identificado como Realità, este enfoque delimitado permite una evaluación exhaustiva y detallada de las funcionalidades y capacidades de este componente crucial en la captura de información topográfica automatizada. 
+En el ámbito del test de aceptación, la atención se dirige exclusivamente al dispositivo identificado como Realità, este enfoque delimitado permite una evaluación exhaustiva y detallada de las funcionalidades y capacidades de este componente crucial en la captura de información topográfica automatizada.
 
 Al concentrar los esfuerzos de prueba en el Realità, se busca garantizar una validación minuciosa y específica de todas las características necesarias para lograr la captura automatizada de datos topográficos.
 
@@ -304,7 +304,7 @@ Esta sección proporciona una visión general del proyecto, incluyendo los sigui
 
 
 \subsection{Especificaciones del producto}
-\subsubsection{Diseño funcional general} 
+\subsubsection{Diseño funcional general}
 
 El diseño funcional general ofrece una descripción panorámica de las funciones clave del producto, abordando sus características y capacidades fundamentales.
 
@@ -392,7 +392,7 @@ Subcaracterísticas seleccionadas:
 \subsection{Matriz de estrategia para Realità}
 \label{sec:org24980a8}
 
-Realità, como sistema autónomo diseñado para la captura eficiente y precisa de información topográfica, despliega diversas funciones esenciales para cumplir con los objetivos del proyecto. 
+Realità, como sistema autónomo diseñado para la captura eficiente y precisa de información topográfica, despliega diversas funciones esenciales para cumplir con los objetivos del proyecto.
 
 
 \begin{table}[h]
@@ -548,7 +548,7 @@ Simuladas & & ++ & ++ & ++ & ++\\
 
 \subsection{Esfuerzo estimado}
 
-La estimación de esfuerzo es un componente vital en la planificación de pruebas de aceptación para el proyecto Realità, al abordar la complejidad y amplitud del sistema autónomo de captura de datos topográficos, es esencial prever y asignar recursos de manera precisa. 
+La estimación de esfuerzo es un componente vital en la planificación de pruebas de aceptación para el proyecto Realità, al abordar la complejidad y amplitud del sistema autónomo de captura de datos topográficos, es esencial prever y asignar recursos de manera precisa.
 
 Esta subsección se centra en la evaluación cuidadosa de las tareas relacionadas con las pruebas, considerando factores como la magnitud de la implementación, la diversidad de las técnicas de prueba y las posibles contingencias, una estimación realista y fundamentada no solo facilita la asignación adecuada de recursos, sino que también sirve como un indicador crucial para evaluar la viabilidad temporal y financiera del proyecto Realità.
 
@@ -578,7 +578,7 @@ Fase de finalización & 16 \\
 
 \subsection{Planificación}
 
-La planificación meticulosa es esencial para el éxito de cualquier proyecto, y las pruebas de aceptación para Realità no son la excepción, en esta fase, se delinea un camino claro que abarca desde la elaboración del plan de pruebas hasta la finalización del informe de resultados y conclusiones, cada actividad se ha calendarizado de manera estratégica para cumplir con el ambicioso objetivo de completar el proyecto dentro del periodo del 10 de marzo al 30 de junio. 
+La planificación meticulosa es esencial para el éxito de cualquier proyecto, y las pruebas de aceptación para Realità no son la excepción, en esta fase, se delinea un camino claro que abarca desde la elaboración del plan de pruebas hasta la finalización del informe de resultados y conclusiones, cada actividad se ha calendarizado de manera estratégica para cumplir con el ambicioso objetivo de completar el proyecto dentro del periodo del 10 de marzo al 30 de junio.
 
 Con un enfoque organizado y detallado, se busca asegurar la eficiencia y efectividad en cada etapa del proceso, contribuyendo así al desarrollo exitoso del sistema autónomo de captura de datos topográficos.
 
@@ -617,9 +617,9 @@ Informe de resultados y conclusiones & 27/05 & 28/05 & Líder de Pruebas \\
 
 \section{Amenazas, riesgos y medidas}
 
-El entorno de pruebas para el proyecto Realità no está exento de desafíos potenciales y riesgos que podrían afectar el éxito de las pruebas de aceptación, por lo anterior se hace necesario identificar, evaluar y gestionar estas amenazas de manera proactiva garantizado la integridad y la eficacia del proceso de prueba. 
+El entorno de pruebas para el proyecto Realità no está exento de desafíos potenciales y riesgos que podrían afectar el éxito de las pruebas de aceptación, por lo anterior se hace necesario identificar, evaluar y gestionar estas amenazas de manera proactiva garantizado la integridad y la eficacia del proceso de prueba.
 
-En esta subsección, se abordarán posibles amenazas y riesgos, desde limitaciones tecnológicas hasta cambios inesperados en los requisitos, y se propondrán medidas mitigadoras específicas. 
+En esta subsección, se abordarán posibles amenazas y riesgos, desde limitaciones tecnológicas hasta cambios inesperados en los requisitos, y se propondrán medidas mitigadoras específicas.
 
 \begin{enumerate}
   \item Posible retraso en la entrega a prueba: en caso de retrasos, se utilizará la estrategia de prueba para determinar las pruebas omitidas, asegurando una cobertura adecuada incluso bajo restricciones de tiempo.

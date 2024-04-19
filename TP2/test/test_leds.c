@@ -50,8 +50,6 @@ void test_check_boundary_values(void);
 void test_check_forbidden_values_turn_on(void);
 void test_check_forbidden_values_turn_off(void);
 
-
-
 /* === Public variable definitions ============================================================= */
 /* === Private variable definitions ============================================================ */
 /* === Private function implementation ========================================================= */
@@ -88,7 +86,7 @@ void test_single_led_off(void) {
 
     // Enciende un LED específico antes de apagarlo
     leds_turn_on_single(LED);
-    
+
     // Apaga un LED específico y verifica que el bit correspondiente se establezca en bajo
     TEST_ASSERT_EQUAL_INT(LED_SUCCESS, leds_turn_off_single(LED));
     TEST_ASSERT_EQUAL_UINT16(LED_OFF, leds_port);
@@ -157,9 +155,9 @@ void test_uninitialized_led_port(void) {
     TEST_ASSERT_EQUAL_UINT8(LED_OFF, leds_port);
 }
 
-
 /**
- * @brief Verifica el comportamiento al consultar el estado de un LED individual con el puerto desinicializado.
+ * @brief Verifica el comportamiento al consultar el estado de un LED individual con el puerto
+ * desinicializado.
  */
 void test_uninitialized_led_port_get_single_value(void) {
     const int LED3 = 3;
@@ -168,7 +166,6 @@ void test_uninitialized_led_port_get_single_value(void) {
     leds_deinit();
     TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS, leds_get_status_single(LED3));
 }
-
 
 /**
  * @brief Verificar valores límite:
@@ -180,7 +177,6 @@ void test_check_boundary_values(void) {
     const int LED1 = 1;
     const int LED16 = 16;
 
-
     TEST_ASSERT_EQUAL_INT(LED_SUCCESS, leds_turn_on_single(LED1)); // Enciende el primer LED
     TEST_ASSERT_BIT_HIGH(LED1 - 1, leds_port); // Verifica que el primer LED esté encendido
     TEST_ASSERT_EQUAL_INT(LED_SUCCESS, leds_turn_on_single(LED16)); // Enciende el último LED
@@ -189,22 +185,25 @@ void test_check_boundary_values(void) {
 
 /**
  * @brief Verificar valores prohibidos al encender:
- *        Verifica que intentar encender un LED con un número mayor que 16 o menor que 1 no afecte al estado del LED.
+ *        Verifica que intentar encender un LED con un número mayor que 16 o menor que 1 no afecte
+ * al estado del LED.
  */
 void test_check_forbidden_values_turn_on(void) {
 
     const int LED1 = 1;
     const int LED16 = 16;
 
-    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS, leds_turn_on_single(LED1 - 1)); // Intenta encender un LED menor que 1
-    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS, leds_turn_on_single(LED16 + 1)); // Intenta encender un LED mayor que 16
+    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS,
+                          leds_turn_on_single(LED1 - 1)); // Intenta encender un LED menor que 1
+    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS,
+                          leds_turn_on_single(LED16 + 1)); // Intenta encender un LED mayor que 16
     TEST_ASSERT_EQUAL_UINT16(LED_OFF, leds_port); // Verifica que todos los LEDs estén apagados
 }
 
-
 /**
  * @brief Verifica valores prohibidos al apagar:
- *        Verifica que intentar apagar un LED con un número mayor que 16 o menor que 1 no afecte al estado del LED.
+ *        Verifica que intentar apagar un LED con un número mayor que 16 o menor que 1 no afecte al
+ * estado del LED.
  */
 void test_check_forbidden_values_turn_off(void) {
     const int LED1 = 1;
@@ -212,8 +211,10 @@ void test_check_forbidden_values_turn_off(void) {
 
     leds_turn_on_all(); // Enciende todos los LEDs antes de la prueba
 
-    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS, leds_turn_off_single(LED1 - 1)); // Intenta apagar un LED menor que 1
-    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS, leds_turn_off_single(LED16 + 1)); // Intenta apagar un LED mayor que 16
+    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS,
+                          leds_turn_off_single(LED1 - 1)); // Intenta apagar un LED menor que 1
+    TEST_ASSERT_EQUAL_INT(LED_ERROR_INVALID_PARAMS,
+                          leds_turn_off_single(LED16 + 1)); // Intenta apagar un LED mayor que 16
     TEST_ASSERT_EQUAL_UINT16(LED_ON, leds_port); // Verifica que todos los LEDs estén encendidos
 }
 
