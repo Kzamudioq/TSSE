@@ -3,7 +3,7 @@
 #+LATEX_CLASS_OPTIONS: [12pt,a4paper, twosite]
 #+LATEX_HEADER: \usepackage[left=2.00cm, right=2.50cm, top=2.50cm, bottom=2.00cm]{geometry}
 #+LATEX_HEADER: \usepackage{fancyhdr}
-#+LATEX_HEADER: \fancyhead[RO,LE]{\thepage} 
+#+LATEX_HEADER: \fancyhead[RO,LE]{\thepage}
 #+LATEX_HEADER: \fancyhead[LO]{\emph{\uppercase{\leftmark}}}
 #+LATEX_HEADER: \fancyfoot{}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{1.0pt}
@@ -56,7 +56,7 @@
 
 
 ** Visión general del documento
-  
+
   Esta subsección describe brevemente los contenidos y la organización
   del resto de la ERS.
 
@@ -72,7 +72,7 @@
   Perspectiva del producto, funciones del producto, características de
   los usuarios, restricciones, factores que se asumen y futuros
   requisitos.
-  
+
 
 ** Perspectiva del producto
 
@@ -143,13 +143,13 @@
   sobre cierto sistema operativo. Si cambian dichos detalles en la
   organización de la empresa, o si cambian ciertos detalles técnicos,
   como el sistema operativo, puede ser necesario revisar y cambiar los
-  requisitos. 
+  requisitos.
 
 
 ** Requisitos futuros
- 
+
  Esta subsección esbozará futuras mejoras al sistema, que podrán
- anlizarse e implementarse en el futuro.   
+ anlizarse e implementarse en el futuro.
 
 
 * Requisitos específicos
@@ -172,8 +172,8 @@
   código o sistema de numeración adecuado.
 
 - Lo ideal, aunque en la práctica no siempre realizable, es que los
-  requisitos posean las siguientes características: 
-  
+  requisitos posean las siguientes características:
+
   + *Corrección:* La ERS es correcta si y sólo si todo requisito que
     figura aquí(y que será implementado en el sistema) refleja alguna
     necesidad real. La corrección de la ERS implica que el sistema
@@ -185,7 +185,7 @@
     formales. En el caso de utilizar términos que, habitualmente,
     poseen más de una interpretación, se definirán con precisión en
     glosario.
- 
+
   + *Completos:* Todos los requisitos relevantes han sido incluidos en
     la ERS. Conviene incluir todas las posibles respuestas del sistema
     a los datos de entrada, tanto validos como no válidos.
@@ -222,7 +222,7 @@
     indica el origen (documento, persona, etc) de cada requisito. La
     trazabilidad hacia delante de un requisito R indica qué
     componentes del sistema son los que realizan el registro R.
-  
+
 
 ** Interfaces externas
 
@@ -247,7 +247,7 @@
   y sugiere, entre otras, las siguientes:
 
 
-- Por tipos de usuarios: 
+- Por tipos de usuarios:
       Distintos usuarios poseen distintos requisitos. Para cada clase de
   usuario que exista en la organización, se especificarán los
   requisitos funcionales que le afecten o tengan mayor relación con
@@ -262,12 +262,12 @@
   paradigma de Orientación a Objetos.
 
 
-- Por estímulos: 
+- Por estímulos:
     Se especificarán los posibles estímulos que recibe el sistema y las
   funciones relacionadas con dicho estímulo.
 
 
-- Por jerarquía funcional: 
+- Por jerarquía funcional:
      Si ninguna de las anteriores alternativas resulta de ayuda, la
   funcionalidad del sistema se especificará como una jerarquía de
   funciones que comparten entradas, salidas o datos internos. Se
@@ -324,11 +324,9 @@
 
   Puede contener todo tipo de información relevante para la ERS pero
   que, propiamente, no forme parte de la ERS. Por ejemplo:
-  
+
   1. Formatos de entrada/salida de datos, por pantalla o en listados.
 
   2. Resultados de análisis de costes.
 
   3. Restricciones acerca del lenguaje de programación.
-
-

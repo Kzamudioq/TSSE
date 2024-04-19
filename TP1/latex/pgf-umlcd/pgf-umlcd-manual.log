@@ -687,7 +687,7 @@ LaTeX Font Info:    ... okay on input line 67.
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes:
 * h-part:(L,W,R)=(34.1433pt, 546.0084pt, 34.1433pt)
 * v-part:(T,H,B)=(34.1433pt, 726.6834pt, 34.1433pt)
 * \paperwidth=614.295pt
@@ -758,7 +758,7 @@ No file pgf-umlcd-manual.toc.
 
 (demo/class.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--9
-[][]\OT1/cmr/m/n/10 name : at-tribute type 
+[][]\OT1/cmr/m/n/10 name : at-tribute type
  []
 
 )
@@ -780,36 +780,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--91
 
 (demo/visibility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
-[][]\OT1/cmr/m/n/10 + Pub-lic 
+[][]\OT1/cmr/m/n/10 + Pub-lic
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
-\OT1/cmr/m/n/10 # Pro-tected 
+\OT1/cmr/m/n/10 # Pro-tected
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
-\OT1/cmr/m/n/10 - Pri-vate 
+\OT1/cmr/m/n/10 - Pri-vate
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--16
-[][]\OT1/cmr/m/n/10 + owner : String 
+[][]\OT1/cmr/m/n/10 + owner : String
  []
 
 
 Underfull \hbox (badness 3746) in paragraph at lines 16--16
-[][]\OT1/cmr/m/n/10 + de-posit( amount : Dol-lars ) 
+[][]\OT1/cmr/m/n/10 + de-posit( amount : Dol-lars )
  []
 
 
 Underfull \hbox (badness 1558) in paragraph at lines 16--16
-\OT1/cmr/m/n/10 + with-drawal( amount : Dol-lars ) 
+\OT1/cmr/m/n/10 + with-drawal( amount : Dol-lars )
  []
 
 ) (demo/visibility.tex
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
 6.
 
 (C:\Users\ktzam\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
@@ -826,12 +826,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
 (demo/abstract-class.tex
 Underfull \hbox (badness 6063) in paragraph at lines 8--8
-[][]\OT1/cmr/m/n/10 owner : String 
+[][]\OT1/cmr/m/n/10 owner : String
  []
 
 ) (demo/abstract-class.tex) (demo/interface.tex
 Underfull \hbox (badness 2951) in paragraph at lines 5--5
-[][]\OT1/cmr/m/n/10 firstName : String 
+[][]\OT1/cmr/m/n/10 firstName : String
  []
 
 ) (demo/interface.tex)
@@ -855,12 +855,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
 (demo/object.tex) (demo/object.tex) (demo/object.tex) (demo/object.tex)
 (demo/object-include-methods.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--9
-[][]\OT1/cmr/m/n/10 owner = Thomas 
+[][]\OT1/cmr/m/n/10 owner = Thomas
  []
 
 
 Underfull \hbox (badness 2221) in paragraph at lines 9--9
-[][]\OT1/cmr/m/n/10 deposit(amount : Dol-lars) 
+[][]\OT1/cmr/m/n/10 deposit(amount : Dol-lars)
  []
 
 ) (demo/object-include-methods.tex)
@@ -895,12 +895,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
 (demo/inheritance.tex
 Underfull \hbox (badness 6063) in paragraph at lines 8--8
-[][]\OT1/cmr/m/n/10 owner : String 
+[][]\OT1/cmr/m/n/10 owner : String
  []
 
 
 Underfull \hbox (badness 7116) in paragraph at lines 24--24
-[][]\OT1/cmr/m/n/10 depositMonthlyInterest ( ) 
+[][]\OT1/cmr/m/n/10 depositMonthlyInterest ( )
  []
 
 ) (demo/inheritance.tex)
@@ -925,7 +925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
 (demo/implement-interface.tex
 Underfull \hbox (badness 2951) in paragraph at lines 5--5
-[][]\OT1/cmr/m/n/10 firstName : String 
+[][]\OT1/cmr/m/n/10 firstName : String
  []
 
 ) (demo/implement-interface.tex)
@@ -940,27 +940,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
 (demo/association.tex
 Underfull \hbox (badness 10000) in paragraph at lines 11--11
-[][]\OT1/cmr/m/n/10 flightNumber : In-te-ger 
+[][]\OT1/cmr/m/n/10 flightNumber : In-te-ger
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--11
-\OT1/cmr/m/n/10 departureTime : Date 
+\OT1/cmr/m/n/10 departureTime : Date
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--11
-\OT1/cmr/m/n/10 flightDuration : Min-utes 
+\OT1/cmr/m/n/10 flightDuration : Min-utes
  []
 
 
 Underfull \hbox (badness 8170) in paragraph at lines 11--11
-\OT1/cmr/m/n/10 departingAirport : String 
+\OT1/cmr/m/n/10 departingAirport : String
  []
 
 
 Underfull \hbox (badness 1189) in paragraph at lines 18--18
-[][]\OT1/cmr/m/n/10 airPlaneType : String 
+[][]\OT1/cmr/m/n/10 airPlaneType : String
  []
 
 ) (demo/association.tex)
@@ -975,7 +975,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
 [3] (demo/unidirectional-association.tex
 Underfull \hbox (badness 6063) in paragraph at lines 16--16
-[][]\OT1/cmr/m/n/10 owner : String 
+[][]\OT1/cmr/m/n/10 owner : String
  []
 
 ) (demo/unidirectional-association.tex)
@@ -1010,12 +1010,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
 [4] (demo/package.tex
 Underfull \hbox (badness 6063) in paragraph at lines 9--9
-[][]\OT1/cmr/m/n/10 owner : String 
+[][]\OT1/cmr/m/n/10 owner : String
  []
 
 
 Underfull \hbox (badness 7116) in paragraph at lines 25--25
-[][]\OT1/cmr/m/n/10 depositMonthlyInterest ( ) 
+[][]\OT1/cmr/m/n/10 depositMonthlyInterest ( )
  []
 
 ) (demo/package.tex)
@@ -1030,7 +1030,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
 (demo/color.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--13
-[][]\OT1/cmr/m/n/10 name : at-tribute type 
+[][]\OT1/cmr/m/n/10 name : at-tribute type
  []
 
 ) (demo/color.tex)
@@ -1045,17 +1045,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
 [5] (demo/abstract-factory.tex
 Underfull \hbox (badness 1983) in paragraph at lines 6--6
-[][]\OT1/cmr/m/it/10 + Cre-atePro-ductA() 
+[][]\OT1/cmr/m/it/10 + Cre-atePro-ductA()
  []
 
 
 Underfull \hbox (badness 1701) in paragraph at lines 12--12
-[][]\OT1/cmr/m/n/10 + Cre-atePro-ductA() 
+[][]\OT1/cmr/m/n/10 + Cre-atePro-ductA()
  []
 
 
 Underfull \hbox (badness 1701) in paragraph at lines 18--18
-[][]\OT1/cmr/m/n/10 + Cre-atePro-ductA() 
+[][]\OT1/cmr/m/n/10 + Cre-atePro-ductA()
  []
 
 ) (demo/abstract-factory.tex [6]) [7] (pgf-umlcd-manual.aux)
@@ -1067,7 +1067,7 @@ Package rerunfilecheck Warning: File `pgf-umlcd-manual.out' has changed.
 Package rerunfilecheck Info: Checksums for `pgf-umlcd-manual.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  5C509CC508264A4C25C753E12A9CF17E;3179.
- ) 
+ )
 Here is how much of TeX's memory you used:
  24228 strings out of 478338
  468870 string characters out of 2836700
@@ -1099,4 +1099,3 @@ PDF statistics:
  532 PDF objects out of 1000 (max. 8388607)
  344 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
-

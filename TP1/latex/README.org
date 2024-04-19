@@ -9,7 +9,7 @@ Motivado por no ver una plantilla para esta especificación en formato latex.
 * Requisitos para editar desde orgmode
 
 + Emacs
-+ Texlive 
++ Texlive
 + (Opcional) TeXstudio
 
 
@@ -17,4 +17,4 @@ En caso de no usar emacs, se puede simplemente descargar el archivo [[testing.te
 
 -----
 
-Cualquier aporte, critica o corrección es bienvenido. 
+Cualquier aporte, critica o corrección es bienvenido.
